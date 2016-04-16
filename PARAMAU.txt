@@ -1,0 +1,2 @@
+ Hay que ajustar la condicion del while que controla los productos que el cliente compra, 
+ ya casi esta terminado solo falta imprimir el tiket
