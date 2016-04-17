@@ -1,3 +1,12 @@
+/*
+ *  Programación Avanzada y Métodos Numéricos
+ *
+ *  Grupo: 02
+ *
+ *	Espejel Alejandro
+ *	Urbina Garrido Mauricio
+ *
+ */
 import java.util.Scanner;
 
 
