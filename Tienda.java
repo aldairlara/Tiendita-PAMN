@@ -67,29 +67,32 @@ public class Tienda {
 		 	
 		 
 		 //CALCULO DEL TOTAL
-		 int tot1 = 0;
-		 int tot2 = 0;
-		 int tot3 = 0;
-		 int tot4 = 0;
-		 int tot5 = 0;
-		 int total = 0;
-		 int pago = 0;
-		 int cambio = 0;
-		 int falta = 0;
+		 double tot1 = 0;
+		 double tot2 = 0;
+		 double tot3 = 0;
+		 double tot4 = 0;
+		 double tot5 = 0;
+		 double total = 0;
+		 double pago = 0;
+		 double cambio = 0;
+		 double falta = 0;
+		 double completar = 0;
 		 //este calculo no trabaja
-		 tot1 = cantidad1*(p1.precio);
+		 tot1 = cantidad1*p1.precio;
 		 tot2 = cantidad1*p2.precio;
 		 tot3 = cantidad1*p3.precio;
 		 tot4 = cantidad1*p4.precio;
-		 tot5 = cantidad1*p5.precio;//hasta aqui, marca errores en el * y en el . del pn.precio para n del 1 al 5
+		 tot5 = cantidad1*p5.precio;//hasta aqui, marca errores en el . del pn.precio para n del 1 al 5
 		 total = tot1 + tot2 + tot3 + tot4 + tot5;
 		 cambio = pago - total;
 		 System.out.println("Con cuanto dinero va a pagar?");
 		 pago = input.nextInt();
-		 if(pago < total){
+		 do{
 		 	falta = total - cambio;
-		 	System.out.println("Te faltan $ " + falta + " pesos carnal");
-		 }//aqui hay que hacer que vaya sumando lo que le falte de dinero
+		 	System.out.println("Te faltan $ " + falta + " pesos carnal\nCuanto mas dinero vas a dar?");
+		 	completar = input.nextInt();
+		 	pago = pago + completar;
+		 }while(pago < total);//aqui hay que hacer que vaya sumando lo que le falte de dinero
 
 		 //RECIBO
 		 System.out.println("\n*********************************");
