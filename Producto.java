@@ -12,7 +12,7 @@ public class Producto {
 	}
 	@Override
 	public String toString() {
-		return "Producto: " + this.nombre + "\tPrecio: $" + this.precio;
+		return this.nombre + "\t$" + this.precio;
 	}
 	public double getPrecio() {
 		return this.precio;
