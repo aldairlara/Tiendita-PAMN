@@ -1,18 +1,23 @@
 public class Producto {
 	private String nombre;
-	private int compra = 0;
-	private int opcion;
+	private double compra;
 	private double precio;
 	public Producto(String nombre, double precio) {
 		this.nombre = nombre;
 		this.precio = precio;
 	}
-	public int comprar(int compra) {
+	public double comprar(double compra) {
 		this.compra = compra;
 		return compra;
 	}
 	@Override
 	public String toString() {
-		return "\tProducto: " + this.nombre + "\tPrecio: " + this.precio;
+		return "Producto: " + this.nombre + "\tPrecio: $" + this.precio;
+	}
+	public double getPrecio() {
+		return this.precio;
+	}
+	public double getCompra() {
+		return this.compra;
 	}
 }
