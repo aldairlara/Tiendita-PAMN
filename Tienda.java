@@ -11,6 +11,7 @@ public class Tienda {
 	public static void main(String[] args) {
 	 System.out.println("\n\t\tBIENVENIDO A LA MINIMICROTIENDITITITA, ESTAMOS PARA SERVIRTE.");
 		 System.out.println("\t\tEstos son los productos que tenemos a la venta: \n");
+		 System.out.println("\tProducto: \tPrecio: ");
 		 System.out.println("\t1.-" + p1);
 		 System.out.println("\t2.-" + p2);
 		 System.out.println("\t3.-" + p3);
@@ -69,22 +70,33 @@ public class Tienda {
 		cambio = pago - total;
 
 		 //<RECIBO></RECIBO>
-		 System.out.println("\n*********************************");
-		 System.out.println("\n     TIENDA UNIVERSITARIA FI     ");
-		 System.out.println("\n\n*Lomas-ajeas col del diablo #666");
+		 System.out.println("\n\t*********************************");
+		 System.out.println("\n\t     TIENDA UNIVERSITARIA FI     ");
+		 System.out.println("\n\n\t*Lomas-ajeas col del diablo #666*");
 		 System.out.println("\n");
-		 System.out.println("\n" + p1.getCompra() + "\tLeche\t$ " + subTot[0]);
-		 System.out.println("\n" + p2.getCompra() + "\tRefresco\t$ " +  subTot[1]);
-		 System.out.println("\n" + p3.getCompra() + "\tCondones\t$ " +  subTot[2]);
-		 System.out.println("\n" + p4.getCompra() + "\tChetos\t$ " +  subTot[3]);
-		 System.out.println("\n" + p5.getCompra() + "\tCaguamas\t$ " +  subTot[4]);
-		 System.out.println("\nTotal:\t$ " +  total);
-		 System.out.println("\n---------------------------------");
-		 System.out.println("\nPago de:\t $ " +  pago);
-		 System.out.println("\nCambio de:\t $ " +  cambio);
-		 System.out.println("\n---------------------------------");
-		 System.out.println("\n\tGRACIAS POR SU COMPRA\t");
-		 System.out.println("\n\n*********************************");
+		 System.out.println("\tCant:   Producto: \tPrecio: ");
+		 if(p1.getCompra()>0){
+		 	System.out.println("\n\t" + p1.getCompra() + "\tLeche\t\t$ " + subTot[0]);
+		 }
+		 if(p2.getCompra()>0){
+		 	System.out.println("\n\t" + p2.getCompra() + "\tRefresco\t$ " +  subTot[1]);
+		 }
+		 if(p3.getCompra()>0){
+		 	System.out.println("\n\t" + p3.getCompra() + "\tCondones\t$ " +  subTot[2]);
+		 }
+		 if(p4.getCompra()>0){
+		 System.out.println("\n\t" + p4.getCompra() + "\tChetos\t\t$ " +  subTot[3]);
+		 }
+		 if(p5.getCompra()>0){
+		 	System.out.println("\n\t" + p5.getCompra() + "\tCaguamas\t$ " +  subTot[4]);
+		 }
+		 System.out.println("\n\t\tTotal:\t\t$ " +  total);
+		 System.out.println("\n\t---------------------------------");
+		 System.out.println("\n\tPago de:\t\t $ " +  pago);
+		 System.out.println("\n\tCambio de:\t\t $ " +  cambio);
+		 System.out.println("\n\t---------------------------------");
+		 System.out.println("\n\t\tGRACIAS POR SU COMPRA\t");
+		 System.out.println("\n\n\t*********************************");
 	
 	}
 }
