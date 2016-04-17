@@ -17,10 +17,10 @@ public class Tienda {
 		 System.out.println(p4);
 		 System.out.println(p5);
 		 do {
-		 	String res ="";
+		 	int res = 0;
 		 	int cantidad = 0;
 		 	int opc = 0;
-		 	System.out.println("\n\tQue deseas producto deseas comprar?: ");
+		 	System.out.println("\n\tQue producto deseas comprar?: ");
 		 	System.out.println("\n1: leche\n2: Refresco\n3: Condones\n4: Chetos\n 5: Cahuasakis");
 		 	opc = input.nextInt();
 		 	switch(opc) {
@@ -53,7 +53,7 @@ public class Tienda {
 		 		System.out.println("OPCION INCORRECTA");
 		 	}
 		 	System.out.println("Deseas comprar otro?(si/no)");
-		 	res = input.nextLine();
+		 	res = input.nextInt();
 		 }while(true);
 	}
 }
