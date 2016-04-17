@@ -101,11 +101,21 @@ public class Tienda {
 		 System.out.println("\n");
 		 System.out.println("\n");
 		 System.out.println("\n");
-		 System.out.println("\n" + cantidad1 + "\tLeche\t$ " + tot1);
-		 System.out.println("\n" + cantidad2 + "\tRefresco\t$ " +  tot2);
-		 System.out.println("\n" + cantidad3 + "\tCondones\t$ " +  tot3);
-		 System.out.println("\n" + cantidad4 + "\tChetos\t$ " +  tot4);
-		 System.out.println("\n" + cantidad5 + "\tCaguamas\t$ " +  tot5);
+		 if(cantidad1>0){
+		 	 System.out.println("\n" + cantidad1 + "\tLeche\t$ " + tot1);
+		 }
+		 if(cantidad2>0){
+		 	 System.out.println("\n" + cantidad2 + "\tRefresco\t$ " +  tot2);
+		 }
+		 if(cantidad3>0){
+		 	 System.out.println("\n" + cantidad3 + "\tCondones\t$ " +  tot3);
+		 }
+		 if(cantidad4>0){
+		 	 System.out.println("\n" + cantidad4 + "\tChetos\t$ " +  tot4);
+		 }
+		 if(cantidad5>0){
+		 	 System.out.println("\n" + cantidad5 + "\tCaguamas\t$ " +  tot5);
+		 }
 		 System.out.println("\nTotal:\t$ " +  total);
 		 System.out.println("\n---------------------------------");
 		 System.out.println("\nPago de:\t $ " +  pago);
