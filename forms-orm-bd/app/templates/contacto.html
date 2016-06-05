@@ -1,0 +1,75 @@
+{% extends "base2.html" %}
+{% block content %}
+<div class="primary">
+		<h2 class="t2">Desarolladores</h2>
+		
+		<ul>
+			<li><a href="https://www.facebook.com/miguel.escobar.37051" target="blank"><img src="../static/img/miguel.jpg"><br>Miguel Escobar</a></li>
+
+			<li><a href="https://www.facebook.com/alejandro.espejellopez" target="blank"><img src="../static/img/ale.jpg"><br>Alejandro Espejel</a></li>
+
+			<li><a href="https://www.facebook.com/MaromasLara?fref=ts"><img src="../static/img/aldair.jpg" target="blank"><br>Aldair Lara</a></li>
+
+			<li><a href="https://www.facebook.com/mauricio.urbina.39?fref=ts"><img src="../static/img/mau.jpg" target="blank"><br>Mauricio Urbina</a></li>
+		</ul>
+		<style>
+				td{
+					text-align: center;
+				}
+				img{
+					width: 300px;
+					height: 300px;
+					border-radius: 15px;
+				}
+				.titulos{
+					font-family: 'Playfair Display', serif, arial;
+					font-size:3.5rem;
+					color: #979A89;
+					text-shadow: 2px 3px 1px #3AA35C;
+
+				}
+				.primary{
+					text-align: center;
+					padding-top: 25px;
+					padding-bottom: 50px;
+					/*max-width: 960px;
+				    width: 75%;*/
+				}
+				.primary ul{
+					list-style: none;
+				}
+
+				 .primary ul li{
+					display: inline-block;
+					margin: 20px 30px 20px 30px;
+					font-size: 1.8rem;
+
+				}
+				 .t2{
+				 	font-family: 'Oswald', sans-serif;
+				 	color: #2F264F;
+				 	text-shadow: 2px 3px 2px #5EAA5B;
+				 	font-size: 250%;
+				 }
+				a{
+					color: #2F264F;
+					text-decoration: none;
+				}
+				a:hover{
+					color:#BAFB24;
+				}
+
+				}a:visited{
+					color: #6CECD9;
+				}
+				ol {
+					list-style: none;
+				}
+				ol li{
+					font-size: 2.5rem;
+					margin: 25px;
+				}
+		</style>
+	</div>
+
+	{% endblock %}

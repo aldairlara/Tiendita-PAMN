@@ -1,0 +1,14 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hola usuario: {{ g.user.nickname}}</h1>
+<br><br>
+<h2>Correo Electronico: {{ g.user.email}}</h2>
+<h2><a href="/edperfil">Editar</a></h2>
+<br><br>
+<hr>
+<br><br>
+
+
+{% endblock %}

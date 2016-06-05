@@ -1,0 +1,34 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+
+        {% for producto in productos %}
+            <div class="col s12 m3"> <!-- esta declaración dice, en movil 1 sola imagen, en tablet y desktop 3 imagenes -->
+                <div class="card small">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='img/productos/' + producto.foto) }}"  width="300px" height="400px"/><br>
+                        <p class="second"> {{  producto.nombre}}</p>
+                    </div>
+                    <div class="card-content">
+                        <p class="second">{{producto.descripcion}}</p>
+                        <p class="second">{{producto.precio}}</p>
+                    </div>
+                    <div class="card-action">
+                      
+                        <a href="/productos/{{producto.id}}" class="waves-effect waves-light btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor%}
+        <style type="text/css">
+            .second{
+                font-size: 1.5em;
+            }
+            .small {
+                border: 3px solid lightblue;
+            }
+        </style>
+    </div>
+{% endblock %}

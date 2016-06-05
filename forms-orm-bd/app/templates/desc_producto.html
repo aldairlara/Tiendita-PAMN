@@ -1,0 +1,31 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+            <div class="col s12 m12"> <!-- esta declaración dice, en movil 1 sola imagen, en tablet y desktop 3 imagenes -->
+                <div class="card large">
+                    <div class="card-image">
+                        <img src="{{ url_for('static', filename='img/productos/' + producto.foto) }}" width="300px" height="400px"/><br>
+                        <span class="card-title">{{producto.nombre}}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{producto.descripcion}}</p>
+                        <p>{{producto.precio}}</p>
+                    </div>
+                    <div class="card-action">
+                    	<form action="/agregar/{{producto.id}}" method="post">
+	                    	{{ form.hidden_tag() }}
+	                    	<div class="col s12 m1">
+	                    	{{ form.cantidad.label }}{{ form.cantidad(size=5) }}
+	                    	</div>
+	                    	<div class="col s12 m12">
+	                        	<button class="waves-effect waves-light btn" type="submit" name="action">Agregar al carrito</button>
+	                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+{% endblock %}

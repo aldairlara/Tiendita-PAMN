@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>The GameBox</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/css/styleindex.css">
+        <!--<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">-->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body onload="prof()">
+      
+    <header id="top" class="main-header">
+      <h1 class="prinstitle">The GameBox</h1>
+      <span class="title">La mejor tienda de gaming en CU</span><br><br>
+      <img src="../static/img/GAMEBOX.jpg"><br>
+      <img class="arrow" src="../static/img/arrow.svg" alt="Down arrow">
+    </header>
+
+
+    <div class="primary-content t-border">
+            <p class="intro">
+                "The GameBox es un proyecto hecho por y para universitarios gamers que tiene por principal objetivo que la comunidad pueda vender y comprar videojuegos a travez de internet de una manera sencilla"
+            </p>
+            <a class="callout" href="/contacto">Conoce mas acerca del proyecto y los desarrolladores</a>
+      
+      <div class="wildlife">
+
+        <h2>Compra y vende cerca de tu comunidad</h2>
+
+
+        {% if g.user.is_authenticated %}
+        <p>Bienvenido usuario: {{ g.user.nickname}} <br> ¿estas listo para comprar y vender productos en tu comunidad?</p><br>
+        <div class="card-panel">
+          <a href="/productos" class="blue-text text-darken-2">Ver catalogo de productos</a>
+        </div>
+        {% else%}
+        <p>
+          Para poder realizar compras y publicar ventas necesitas tener una cuenta con nosotros. <br>
+          <a href="/login"> <¡COMIENZA YA!></a>
+        </p>
+        {% endif%}
+        
+        
+
+      </div>
+    </div><!-- End .primary-content -->
+
+        <div class="secondary-content t-border group"> 
+      <div class="resorts">
+        <img src="../static/img/venta.jpg" alt="vend">
+        <h3>Venta</h3>
+        <p>
+          Podras vender cualquier articulo relacionado con el gaming en tu comunidad, lo cual trae ventajas: 
+        </p>
+        <ul>
+          <li>Vende a un publico maduro y conciente</li>
+          <li>Todos los posibles compradores son serios</li>
+          <li>Publica tu articulo gratis, solo si vendes nos das el 5% de comision</li>
+        </ul>       
+      </div>
+      <div class="tips">
+        <img src="../static/img/compra.jpg" alt="Mountain">
+        <h3>Compra</h3>
+        <p>
+          Podras comprar cualquier articulo relacionado con el gaming en tu comunidad y apobecha las ventajas: 
+        </p>
+        <ul>
+          <li>Compra gaming cerca del ligar donde estudias</li>
+          <li>Todos los vendedores son serios y no hay estafadores</li>
+          <li>Si compraste con nosotros algo que esta mal, te lo cambiamos o te devolvemos tu dinero</li>
+          <li>Gran variedad de Productos</li>
+        </ul>
+      </div>
+        </div><!-- End .secondary-content -->
+    
+        <footer class="main-footer">
+            <p>Todos los derechos reservados</p><br>
+            <a href="/contacto">Contactanos.</a>
+            <a href="#top">Back to top &raquo;</a>
+        </footer>
+        <script type="text/javascript">
+          function prof() {
+          alert("ponganos 10 prof");
+            }
+</script>
+    </body>
+</html>

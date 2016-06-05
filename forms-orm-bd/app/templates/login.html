@@ -1,0 +1,29 @@
+<!-- extend base2 layout -->
+{% extends "base2.html" %}
+
+{% block content %}
+<h1>Iniciar sesion</h1>
+<br><br>
+<form action="" method="post" name="login">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.login.label }}{{ form.login(size=20) }}<br>
+        {% for error in form.login.errors %}
+          <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+
+    <p>
+        {{ form.password.label }}{{ form.password(size=20) }}<br>
+        {% for error in form.password.errors %}
+          <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+
+    <p>{{ form.remember_me }} Recuerdame</p>
+    <p><input type="submit" value="Sign In"></p>
+</form>
+<br><br>
+<h4>Si no tienes una cuenta con nosotros <a href="registro"> REGISTRATE AQUI</a></h4>
+<br><br>
+{% endblock %}
