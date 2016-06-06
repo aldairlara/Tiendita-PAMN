@@ -10,14 +10,18 @@
                  <thead>
                   <tr>
                       <th data-field="nombre">Producto</th>
-                      <th data-field="cantidad">Cantidad</th>
+                      <th data-field="cantidad">&nbsp;&nbsp;&nbsp;Cantidad</th>
+                      <th data-field="precio">&nbsp;&nbsp;&nbsp;&nbsp;Precio $</th>
+                      <th data-field="total">&nbsp;&nbsp;&nbsp;&nbsp;Total $</th>
                   </tr>
                 </thead>
                 <tbody>
                 {% for producto in productos %}
                     <tr>
                         <td>{{producto[1]}}</td>
-                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{producto[2]}}</td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{producto[2]}}</td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{producto[3]}}</td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{producto[4]}}</td>
                     </tr>
 
                 {% endfor %}
