@@ -8,16 +8,17 @@ from .models import Carrito
 
 @app.route("/edperfil", methods=['GET', 'POST'])
 def editar():
-	form = EditForm()
-
+	user = User.query.get(1)
+	form = EditForm(request.form, form=user)
 	if form.validate_on_submit():
-		user = User(nickname=form.login.data, password=form.password.data, email=form.email.data)
-		db.session.replace(user) 
+		user.nickname=form.login.data
+		user.password=form.password.data
+		user.email=form.email.data
+		db.session.merge(user) 
 		db.session.commit()
-		login_user(user, remember=True)
 		session['productos'] = list()
-		flash('Cabios guardados')
-		return redirect(url_for('productos'))
+		flash('Cambios guardados')
+		return redirect(url_for('perfil'))
 	return render_template('edperfil.html', title='edit', form=form)
 
 
